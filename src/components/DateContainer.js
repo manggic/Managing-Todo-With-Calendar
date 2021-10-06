@@ -1,5 +1,5 @@
 import React from "react";
-
+import "../styles/DateContainer.css";
 function DateContainer({ date, showTaskModal }) {
   return (
     <div onClick={showTaskModal} className="DateContainer">

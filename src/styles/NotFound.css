@@ -1,0 +1,11 @@
+.notFound {
+  height: 100vh;
+  text-align: center;
+  padding-top: 30px;
+  /* background: url("images/NotFound.webp"); */
+  background: url("images/NotFound.webp") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}

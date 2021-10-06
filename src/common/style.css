@@ -1,0 +1,14 @@
+.logoutSection {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.logoutDropdown {
+  padding-left: 10px;
+}
+
+.userIcon {
+  font-size: 30px;
+}

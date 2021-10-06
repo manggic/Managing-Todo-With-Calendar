@@ -1,0 +1,65 @@
+.monthCalendar {
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  font-family: system-ui;
+  font-size: 20px;
+
+  justify-content: space-around;
+}
+
+.body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  font-size: 17px;
+  padding: 10px 10px;
+  background: aliceblue;
+  border-bottom: 0.1px solid red;
+  border-bottom-color: #d9d9d9;
+}
+
+.actions {
+  display: flex;
+}
+.addInput {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.addInput input {
+  width: 83%;
+}
+
+input {
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: blue;
+}
+input:focus {
+  border-color: green;
+}
+
+.ant-modal-close-x {
+  margin-right: -25px;
+  width: 121px !important;
+}
+
+.editIcon:hover {
+  cursor: pointer;
+}
+.deleteIcon:hover {
+  cursor: pointer;
+}
+
+.paddingLeft {
+  padding-left: 10px;
+}

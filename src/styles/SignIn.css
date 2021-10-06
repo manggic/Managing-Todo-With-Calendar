@@ -1,0 +1,62 @@
+.signIn {
+  display: flex;
+}
+
+.signup {
+  color: aqua;
+  cursor: pointer;
+}
+
+.signupSection {
+  padding-top: 10px;
+}
+
+.ant-input-affix-wrapper {
+  padding: 8px 10px;
+}
+
+.signInRight {
+  justify-content: center;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: aqua;
+}
+
+.signInLeft {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background: blueviolet;
+  width: 40%;
+  align-items: center;
+}
+
+.imageContainer {
+  justify-content: center;
+  display: flex;
+}
+.formContainer {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  padding: 45px;
+  background: antiquewhite;
+  width: 50%;
+  border-radius: 12px;
+}
+
+/* #components-form-demo-normal-login .login-form {
+  max-width: 300px;
+}
+#components-form-demo-normal-login .login-form-forgot {
+  float: right;
+}
+#components-form-demo-normal-login .ant-col-rtl .login-form-forgot {
+  float: left;
+} */
+.login-form-button {
+  width: 100%;
+}
