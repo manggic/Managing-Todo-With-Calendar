@@ -1,0 +1,66 @@
+.task {
+  display: flex;
+  justify-content: space-between;
+  font-size: 17px;
+  padding: 10px 10px;
+  background: aliceblue;
+  border-bottom: 0.1px solid red;
+  border-bottom-color: #d9d9d9;
+}
+
+.addInput {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+input {
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: blue;
+}
+input:focus {
+  border-color: green;
+}
+
+.ant-modal-close-x {
+  margin-right: -25px;
+  width: 121px !important;
+}
+
+.addInput input {
+  width: 83%;
+}
+
+h1 {
+  text-align: center;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  /* font-weight: bold; */
+}
+
+.editIcon:hover {
+  cursor: pointer;
+}
+.deleteIcon:hover {
+  cursor: pointer;
+}
+
+.paddingLeft {
+  padding-left: 10px;
+}
+
+button {
+  width: 100px;
+  height: 30px;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  margin: 10px;
+}
+
+.actions {
+  display: flex;
+}

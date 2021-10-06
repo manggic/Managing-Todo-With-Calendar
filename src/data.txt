@@ -1,0 +1,25 @@
+Data : {
+    2021: {
+          'January': {
+                    currentStage :{
+                         '1-2-2021': {
+                             allTasK :[],
+                             buttonToShow: 'Add',
+                             taskToAdd : {  id:'',taskName:'' }
+                         }
+                    }   
+               },
+               'february:{
+    
+               }
+          },
+     2022: {
+          'January':   {
+    
+               },
+          'february:{
+    
+               }
+          }
+    
+    }
