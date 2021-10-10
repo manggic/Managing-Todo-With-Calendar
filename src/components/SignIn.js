@@ -8,6 +8,8 @@ import loginSvg from "images/login.svg";
 import signupLogo from "images/signup-logo.png";
 
 import "../styles/SignIn.css";
+import { useAuth } from "contexts/AuthContext";
+
 function SignIn() {
   const [state, setState] = useState({
     userName: "",
@@ -16,22 +18,32 @@ function SignIn() {
   });
   const history = useHistory();
   const [form] = Form.useForm();
+  const { signup, login } = useAuth();
 
-  const login = (e) => {
-    e.preventDefault();
-  };
+  // const login = (e) => {
+  //   e.preventDefault();
+  // };
 
   useEffect(() => {
     localStorage.clear();
   }, []);
 
-  const onFinish = (values) => {
+  const onFinish = async (values) => {
     console.log("Success:", values);
 
-    if (values.username && values.password) {
+    if (values.email && values.password) {
       localStorage.setItem("token", "signin");
 
-      history.push("/");
+      try {
+        if (state.whatOptionToShow === "LogIn") {
+          await login(values.email, values.password);
+        } else {
+          await signup(values.email, values.password);
+        }
+        history.push("/");
+      } catch (e) {
+        alert("failed to process the request");
+      }
     }
   };
 
@@ -83,7 +95,7 @@ function SignIn() {
             onFinish={onFinish}
           >
             <Form.Item
-              name="username"
+              name="email"
               rules={[
                 {
                   required: true,
@@ -93,7 +105,8 @@ function SignIn() {
             >
               <Input
                 prefix={<UserOutlined className="site-form-item-icon" />}
-                placeholder="Username"
+                type="email"
+                placeholder="Email"
                 value={""}
               />
             </Form.Item>
@@ -126,6 +139,7 @@ function SignIn() {
                 type="primary"
                 htmlType="submit"
                 className="login-form-button"
+                style={{ background: "rgb(139 172 197)" }}
               >
                 {state.whatOptionToShow}
               </Button>

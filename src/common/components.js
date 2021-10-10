@@ -3,18 +3,29 @@ import loginSvg from "images/login.svg";
 import { Menu, Dropdown } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 import { useHistory } from "react-router-dom";
+import { useAuth } from "contexts/AuthContext";
 import { FaUserCircle } from "react-icons/fa";
 import "./style.css";
 const LogoutSection = () => {
   const history = useHistory();
-  const Logout = () => {
-    history().push("/signin");
+
+  const { logout } = useAuth();
+  const Logout = async () => {
+    console.log("inside month calendar logout");
+
+    try {
+      await logout();
+      console.log("calling logout");
+      history.push("/signin");
+    } catch (e) {
+      alert("log out failed");
+    }
   };
 
   const menu = (
     <Menu>
       <Menu.Item>
-        <a onClick={() => history.push("/signin")}>Logout</a>
+        <a onClick={() => Logout()}>Logout</a>
       </Menu.Item>
     </Menu>
   );

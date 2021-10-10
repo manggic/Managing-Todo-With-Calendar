@@ -1,9 +1,10 @@
 import React from "react";
 
+import "../styles/MonthHeading.css";
 function MonthHeading({ month }) {
   return (
-    <div>
-      <h1>{month}</h1>
+    <div className="monthHeading">
+      <div>{month}</div>
     </div>
   );
 }

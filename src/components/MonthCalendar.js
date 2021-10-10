@@ -278,12 +278,20 @@ function MonthCalendar() {
           />
 
           {state?.dataToShowInModal?.buttonToShow === "Add" && (
-            <Button onClick={addTask} type="primary">
+            <Button
+              style={{ background: "cadetblue", width: "90px" }}
+              onClick={addTask}
+              type="primary"
+            >
               Add
             </Button>
           )}
           {state?.dataToShowInModal?.buttonToShow === "Edit" && (
-            <Button onClick={editTask} type="primary">
+            <Button
+              style={{ background: "cadetblue", width: "90px" }}
+              onClick={editTask}
+              type="primary"
+            >
               Edit
             </Button>
           )}

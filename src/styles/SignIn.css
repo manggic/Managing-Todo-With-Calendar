@@ -3,7 +3,7 @@
 }
 
 .signup {
-  color: aqua;
+  color: #6c63ff;
   cursor: pointer;
 }
 
@@ -22,14 +22,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: aqua;
+  background: #0e53877a;
 }
 
 .signInLeft {
   display: flex;
   justify-content: center;
   height: 100vh;
-  background: blueviolet;
+  background: #e6f7ff;
   width: 40%;
   align-items: center;
 }
@@ -43,7 +43,7 @@
   justify-content: center;
   align-items: center; */
   padding: 45px;
-  background: antiquewhite;
+  background: #e6f7ff91;
   width: 50%;
   border-radius: 12px;
 }
@@ -59,4 +59,8 @@
 } */
 .login-form-button {
   width: 100%;
+}
+
+.ant-btn-primary {
+  border: none;
 }

@@ -13,35 +13,39 @@ import {
 import MonthCalendar from "./components/MonthCalendar";
 import SignIn from "components/SignIn";
 import NotFound from "components/NotFound";
+import { AuthProvider } from "contexts/AuthContext";
+import PrivateRoute from "components/PrivateRoute";
 const App = () => {
   return (
     <Router>
-      <div className="app">
-        <Switch>
-          <Route
-            path="/"
-            exact
-            component={() => {
-              return <MonthCalendar />;
-            }}
-          />
-          <Route
-            path="/signin"
-            exact
-            component={() => {
-              return <SignIn />;
-            }}
-          />
+      <AuthProvider>
+        <div className="app">
+          <Switch>
+            <PrivateRoute
+              path="/"
+              exact
+              component={() => {
+                return <MonthCalendar />;
+              }}
+            />
+            <Route
+              path="/signin"
+              exact
+              component={() => {
+                return <SignIn />;
+              }}
+            />
 
-          <Route
-            path="*"
-            exact
-            component={() => {
-              return <NotFound />;
-            }}
-          />
-        </Switch>
-      </div>
+            <Route
+              path="*"
+              exact
+              component={() => {
+                return <NotFound />;
+              }}
+            />
+          </Switch>
+        </div>
+      </AuthProvider>
     </Router>
   );
 };
